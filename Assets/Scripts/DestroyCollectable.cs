@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class DestroyCollectable : MonoBehaviour
 {
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (other.gameObject.TryGetComponent<ICollectable>(out var clickable))
+		if (collision.gameObject.TryGetComponent<ICollectable>(out var clickable))
 		{
 			clickable.OnNotCollect();
 		}

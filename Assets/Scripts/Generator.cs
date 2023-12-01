@@ -22,7 +22,7 @@ public class Generator : MonoBehaviour
 			var x = Random.Range(-3f, 3f);
 			var y = Random.Range(1f, 3f); 
 
-			var position = new Vector3(x, y, 0f) - collector.position; 
+			var position = new Vector2(x, y); 
 
 
 			var clickable = Instantiate(interactablePrefab, position, Quaternion.identity);
@@ -39,9 +39,9 @@ public class Generator : MonoBehaviour
 	private void OnMissedObject()
 	{
 		missedObjects++;
-		//Debug.Log(missedObjects);
+		Debug.Log("End of Game!");
 
-		if(missedObjects > 10)
+		if (missedObjects > 10)
 		{
 			//restart
 			Debug.Log("End of Game!");
