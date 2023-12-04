@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 183153729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.166, z: 0}
+  m_LocalPosition: {x: -0.0172, y: -0.179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -798,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746944112022602571, guid: 3fa2c57ed3324204c88c67a069aa516f, type: 3}
       propertyPath: m_LayerOverridePriority
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8094336020061217575, guid: 3fa2c57ed3324204c88c67a069aa516f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1075,8 +1075,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627907177}
+  - component: {fileID: 627907183}
   - component: {fileID: 627907179}
-  - component: {fileID: 627907180}
   - component: {fileID: 627907181}
   - component: {fileID: 627907182}
   m_Layer: 0
@@ -1122,18 +1122,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 1044320834}
---- !u!114 &627907180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627907176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcd6a7361d0b254cb18e6460aeaeb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &627907181
 Rigidbody2D:
   serializedVersion: 4
@@ -1193,9 +1181,21 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005891606, y: -0.02249507}
-  m_Size: {x: 0.21254256, y: 0.30507255}
+  m_Offset: {x: -0.005891606, y: -0.008445846}
+  m_Size: {x: 0.21254256, y: 0.27697414}
   m_Direction: 0
+--- !u!114 &627907183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627907176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fcb33d8958abf44fadb77926909a557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &638543315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3008790804299420990, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}
@@ -2372,10 +2372,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1361077897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1882496937e6bd54bb758b430c26f1a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f513fc72423dad49b984470781266bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactablePrefab: {fileID: 5955680820740843199, guid: 3fa2c57ed3324204c88c67a069aa516f, type: 3}
+  interactablePrefab: {fileID: 0}
   collector: {fileID: 627907177}
 --- !u!4 &1469607549 stripped
 Transform:
@@ -2396,8 +2396,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1518008955}
-  - component: {fileID: 1518008954}
   - component: {fileID: 1518008953}
+  - component: {fileID: 1518008954}
   m_Layer: 0
   m_Name: DestroyObject
   m_TagString: Untagged
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518008952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd52ac023162044394e23c7e4f2ce27, type: 3}
+  m_Script: {fileID: 11500000, guid: 446c24c78c8f73542b4f5ff44926f9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1518008954
@@ -4860,5 +4860,5 @@ SceneRoots:
   - {fileID: 1602895925}
   - {fileID: 1283109176}
   - {fileID: 373475184}
-  - {fileID: 435486546}
   - {fileID: 1518008955}
+  - {fileID: 435486546}

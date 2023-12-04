@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class Generator : MonoBehaviour
 {
 	[SerializeField] private CollectableObject interactablePrefab;
-	[SerializeField] private Transform collector; // Посилання на гравця (колектор)
+	[SerializeField] private Transform collector; 
 
-	private float delay = 0.5f;
+	private readonly float delay = 0.5f;
 	private float timer = 0f;
 	private int result = 0;
 	private int missedObjects = 0;
@@ -39,11 +39,9 @@ public class Generator : MonoBehaviour
 	private void OnMissedObject()
 	{
 		missedObjects++;
-		Debug.Log("End of Game!");
 
 		if (missedObjects > 10)
 		{
-			//restart
 			Debug.Log("End of Game!");
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			Debug.Log("Start again!");

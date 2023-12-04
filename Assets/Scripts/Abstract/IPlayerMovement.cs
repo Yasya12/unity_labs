@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
-	internal interface IMovement2D
+	public interface IPlayerMovement
 	{
-		void Move(float horizontal, bool jumpDownBtn, bool jumpUpBtn);
+		void Move(Rigidbody2D rb, float horizontal, bool jumpDown, bool jumpUp);
 	}
 }
