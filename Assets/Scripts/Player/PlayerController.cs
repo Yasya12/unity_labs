@@ -12,6 +12,7 @@ namespace Assets.Scripts
 		[SerializeField] private Transform groundCheck;
 		[SerializeField] private LayerMask groundLayer;
 		[SerializeField] private Animator animator;
+		[SerializeField] private AudioSource jumpSoundEffect;
 
 		private Rigidbody2D rb;
 		private bool isFacingRight = true;
@@ -63,7 +64,8 @@ namespace Assets.Scripts
 		{
 			if (jumpDown)
 			{
-				movementStrategy = new JumpingMovementStrategy(jumpingPower, IsGrounded);
+                jumpSoundEffect.Play();
+                movementStrategy = new JumpingMovementStrategy(jumpingPower, IsGrounded);
 			}
 
 			movementStrategy.Move(rb, horizontal, jumpDown, jumpUp);

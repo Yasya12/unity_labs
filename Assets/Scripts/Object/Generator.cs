@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Generator : MonoBehaviour
 {
 	[SerializeField] private CollectableObject interactablePrefab;
-	[SerializeField] private Transform collector; 
+	[SerializeField] private Transform collector;
+	[SerializeField] private AudioSource collectionSoundEffectt;
+    [SerializeField] private AudioSource deathSoundEffectt;
 
-	private readonly float delay = 0.5f;
+    private readonly float delay = 0.5f;
 	private float timer = 0f;
 	private int result = 0;
 	private int missedObjects = 0;
@@ -32,7 +34,8 @@ public class Generator : MonoBehaviour
 
 	private void OnCollectObject()
 	{
-		result++;
+        collectionSoundEffectt.Play();
+        result++;
 		Debug.Log(result);
 	}
 
@@ -42,7 +45,8 @@ public class Generator : MonoBehaviour
 
 		if (missedObjects > 10)
 		{
-			Debug.Log("End of Game!");
+			deathSoundEffectt.Play();
+            Debug.Log("End of Game!");
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			Debug.Log("Start again!");
 		}
